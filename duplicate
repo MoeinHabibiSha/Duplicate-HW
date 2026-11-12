@@ -1,0 +1,15 @@
+public class DUPLICATE {
+
+    public static boolean Duplicate(String s){
+        if (s.isEmpty()) return true;
+
+
+        if (s.length() %2 == 0) {
+            int mid = s.length() / 2;
+            String left = s.substring(0, mid);
+            String right = s.substring(mid);
+            if (left.equals(right)) return true;
+        }
+        return Duplicate(s.substring(1));
+        }
+    }
